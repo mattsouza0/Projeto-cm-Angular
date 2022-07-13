@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta bbic",
+      "price": 5.89
+    },
+    {
+      "id": 2,
+      "name": "Lapis Faber Castell",
+      "price": 44.89
+    },
+    {
+      "id": 3,
+      "name": "Celular Motorola",
+      "price": 4444.89
+    },
+    {
+      "id": 5,
+      "name": "Geladeira Tsunami",
+      "price": "1.000.000"
+    },
+    {
+      "id": 6,
+      "name": "Apagador",
+      "price": "99.90"
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Smartphones"
+    },
+    {
+      "id": 2,
+      "name": "Eletrodomésticos"
+    }
+  ]
+}

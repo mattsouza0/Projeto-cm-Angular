@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="exe2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exercício de Fixação 2 - Parte 1</title>
+
+    <!-- Style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Script -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-locale_pt-br.js"></script>
+    <script src="lib/angular/angular-messages.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <!-- Ctrl -->
+    <script src="js/controllers/exe2Ctrl.js"></script>
+    <script src="js/controllers/bairrosCtrl.js"></script>
+
+    <!-- Service -->
+    <script src="js/services/bairrosAPIService.js"></script>
+
+    <!-- Value -->
+    <script src="js/value/configValue.js"></script>
+
+    <!-- Config -->
+    <script src="js/config/routeConfig.js"></script>
+
+    <!-- Filters -->
+
+    <!-- Directives -->
+
+    <!-- Interceptors -->
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-custom">
+            <div class="container">
+                <a class="navbar-brand mb-0 h1" href="#">Exercício 2</a>
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav nav-tabs">
+                        <li class="nav-item active"><a href="#home" class="nav-link">Home</a></li>
+                        <li class="nav-item dropdown"><a href="#visualizacao" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Visualização</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a href="#" class="dropdown-item">Bairros</a></li>
+                            <li><a href="#" class="dropdown-item">Endereços</a></li>
+                            <li><a href="#" class="dropdown-item">Feature #3</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <input type="text" class="form-control me-2" ng-model="criterioDeBusca" ng-model-options="{updateOn: 'default blur', debounce: {default:500, blur:0}}" placeholder="Pesquisa na Tabela" />
+                    <!-- <button type="submit" class="btn btn-success">Buscar</button> -->
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div ng-view></div>
+    </main>
+
+    <!-- USAR A MSM LOGICA DE QUANDO APERTA NO LINK (DO EXECICIO DA LISTA TELEFONICA) E MUDA PRA A OUTRA TELA, NESSE CASO SERIA A TELA DA TABLE DOS BAIRROS E DE CADASTRO DE BAIRROS-->
+
+    <footer>
+        <p>Desenvolvido por Mateus Almeida</p>
+        <p>2022</p>
+    </footer>
+    
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

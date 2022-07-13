@@ -1,0 +1,23 @@
+<div class="container table-responsive-md">
+    <table class="table" >
+        <caption id="tituloDaTabela">Bairros Cadastrados</caption>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>IPTU</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="bairro in bairros | filter:criterioDeBusca">
+                <td>{{bairro.id}}</td>
+                <td>{{bairro.nome}}</td>
+                <td>{{bairro.iptu | currency}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <a href="#!/novoBairro" class="btn btn-primary">Novo Bairro</a>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <form name="bairroForm">
+        <input class="form-control" type="text" ng-model="bairro.nome" placeholder="Nome do Bairro" name="nomeDoBairro" ng-required="true" ng-minLength="10" />
+        <input class="form-control" type="number" ng-model="bairro.iptu" placeholder="IPTU" name="valorDoIptu" ng-required="true" ng-minLength="2">
+    </form>
+
+    <div ng-show="bairroForm.nomeDoBairro.$error.required && bairroForm.nome.$dirty" class="alert alert-danger">
+        Por favor, preencha o nome do bairro.
+    </div>
+
+    <div ng-show="bairroForm.valorDoIptu.$error.required && bairroForm.valorDoIptu.$dirty" class="alert alert-danger">
+        Por favor, informe o valor do IPTU.
+    </div>
+
+    <button class="btn btn-primary" ng-click="adicionarBairro(bairro)" ng-disabled="bairroForm.$invalid" >Adicionar Bairro</button>
+</div>

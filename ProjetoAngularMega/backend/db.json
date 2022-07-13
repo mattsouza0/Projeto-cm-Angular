@@ -1,0 +1,110 @@
+{
+  "bairros": [
+    {
+      "id": 1,
+      "nome": "Bairro Feliz",
+      "iptu": "350.98"
+    },
+    {
+      "id": 2,
+      "nome": "Bairro da Luz",
+      "iptu": "500.02"
+    },
+    {
+      "id": 3,
+      "nome": "Bairro do Escuro",
+      "iptu": "433.33"
+    }
+  ],
+  "enderecos": [
+    {
+      "id": 1,
+      "rua": "Rua Otto Sommer",
+      "numero": "543",
+      "complemento": "Qd.12 Lt.20",
+      "cep": "86015-270",
+      "bairro": {
+        "id": 2,
+        "nome": "Bairro da Luz"
+      }
+    },
+    {
+      "id": 2,
+      "rua": "Rua Carlos Nascimento",
+      "numero": "321",
+      "complemento": "Qd.01 Lt.10",
+      "cep": "13785-432",
+      "bairro": {
+        "id": 1,
+        "nome": "Bairro Feliz"
+      }
+    }
+  ],
+  "profissoes": [
+    {
+      "id": 1,
+      "nome":"Porteiro",
+      "salario": "1498.98"
+    },
+    {
+      "id": 2,
+      "nome":"Faxineiro",
+      "salario": "1390"
+    }
+  ],
+  "pessoas": [
+    {
+      "id": 1,
+      "nome":"Adalberto Franco",
+      "dataDeNascimento": "12/12/2012",
+      "sexo": "Masculino",
+      "pcd": "sim",
+      "altura": "1,32",
+      "peso": "98.3",
+      "cpf": "440.347.930-82",
+      "tipo": "fisica",
+      "endereco": {
+        "id": 2,
+        "rua": "Rua Carlos Nascimento",
+        "numero": "321",
+        "complemento": "Qd.01 Lt.10",
+        "cep": "13785-432",
+        "bairro":{
+          "nome": "Bairro Feliz"
+        }
+      },
+      "profissao": {
+        "id": 1,
+        "nome":"Porteiro"
+      }
+    }
+  ],
+  "compras": [
+    {
+      "id": 1,
+      "valorTotal": "499.99",
+      "pessoa": {
+        "id": 1,
+        "nome":"Adalberto Franco"
+      }
+    }
+  ],
+  "itensDeCompra": [
+    {
+      "id": 1,
+      "nome": "Luva Gucci",
+      "valor": "400.00",
+      "compra": {
+        "id": 1
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Adesivos Gucci",
+      "valor": "99.99",
+      "compra": {
+        "id": 1
+      }
+    }
+  ]
+}

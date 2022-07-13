@@ -1,0 +1,76 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main p {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #1b2845;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/* Navbar */
+.nav-link { 
+    color: #ffffff;
+}
+
+.bg-custom {
+    background-color: #1b2845;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1b2845;
+    color: #FFFFFF;
+    margin-top: auto;
+}
+
+/* Tabela Bairro */
+
+table {
+    empty-cells: hide;
+    caption-side: top;
+    text-align: center;
+}
+
+table * {
+    border: 1px solid #000;
+}
+
+#tituloDaTabela { 
+    color: #000;
+    border: 0px;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+}
+
+thead {
+    background-color: #1b2845;
+}
+
+th {
+    color: #ffffff;
+}
+
+tbody {
+    background-color: #ddd;
+}
+    
+tbody tr:hover {
+    background-color: #fff;
+}
