@@ -41,6 +41,17 @@ footer {
 
 /* Tabela Bairro */
 
+.div-table {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    width: 700px;
+    text-align: center;
+    margin-left: auto; /* centraliza */
+    margin-right: auto; /* centraliza */
+    margin-top: 20px;
+}
+
 table {
     empty-cells: hide;
     caption-side: top;
@@ -57,6 +68,7 @@ table * {
     font-weight: bold;
     font-size: 19px;
     text-align: center;
+    color: #1b2845;
 }
 
 thead {
@@ -73,4 +85,38 @@ tbody {
     
 tbody tr:hover {
     background-color: #fff;
+}
+
+.but {
+    font-size: 12px;
+}
+
+/* Form */
+.form-control {
+    margin-bottom: 5px;
+}
+
+span {
+    color: rgb(240, 0, 0);
+}
+
+.div-form {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: .3rem;
+    width: 400px;
+    margin-left: auto; /* centraliza */
+    margin-right: auto; /* centraliza */
+    margin-top: 60px;
+    text-align: center;
+}
+
+.style-label {
+    text-align: left;
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+    border: 0px;
+    font-size: 19px;
+    color: #1b2845;
 }
