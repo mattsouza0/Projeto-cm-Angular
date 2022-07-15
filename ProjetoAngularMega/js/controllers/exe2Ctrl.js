@@ -8,11 +8,7 @@ angular.module("exe2").controller("exe2Ctrl", function ($scope, bairros, bairros
     };
 
     $scope.editarBairro = function (bairro){
-        bairrosAPI.editBairro(bairro).then(function (response) {
-            delete $scope.bairro;
-            $scope.bairroForm.$setPristine();
-            $location.path("/bairros");
-        });
+        bairrosAPI.editBairro(bairro);
     }; 
 
     $scope.edit = function (bairro) {
