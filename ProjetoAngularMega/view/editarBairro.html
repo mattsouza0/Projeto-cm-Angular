@@ -1,0 +1,26 @@
+<div class="div-form">
+    <h3 class="titulos">Edição de Bairro</h3>
+    
+    <hr />
+
+    <form name="bairroForm" ng-repeat="bairro in bairros">
+        <label for="nomeDoBairro" class="style-label">Nome do Bairro<span>*</span></label>
+        <input class="form-control" type="text" ng-model="bairro.nome" id="nomeDoBairro" name="nomeDoBairro" ng-required="true" ng-minLength="10" />
+
+        <label for="valorDoIptu" class="style-label">Valor do IPTU<span>*</span></label>
+        <input class="form-control" type="number" ng-model="bairro.iptu" id="valorDoIptu" name="valorDoIptu" ng-required="true" ng-minLength="2" />
+    </form>
+
+    <hr />
+
+    <div ng-show="bairroForm.nomeDoBairro.$error.required && bairroForm.nomeDoBairro.$dirty" class="alert alert-danger">
+        Por favor, preencha o nome do bairro.
+    </div>
+
+    <div ng-show="bairroForm.valorDoIptu.$error.required && bairroForm.valorDoIptu.$dirty" class="alert alert-danger">
+        Por favor, informe o valor do IPTU.
+    </div>
+
+    <button class="btn btn-success" ng-click="editarBairro(bairro)" ng-disabled="bairroForm.$invalid" >Atualizar</button>
+    
+</div>

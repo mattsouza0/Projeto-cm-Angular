@@ -1,6 +1,6 @@
 <div class="container table-responsive-md div-table ">
-    <table class="table" >
-        <caption id="tituloDaTabela">Bairros Cadastrados</caption>
+    <table class="table">
+        <caption>Bairros Cadastrados</caption>
         <thead>
             <tr>
                 <th>Código</th>
@@ -15,12 +15,24 @@
                 <td>{{bairro.nome}}</td>
                 <td>{{bairro.iptu | currency}}</td>
                 <td>
-                    <button class="btn btn-warning but">Edit</button>
-                    <button class="btn btn-danger but">Del</button>
+                    <!-- <a href="#!/editarBairro" class="btn btn-warning but">Edit</a> -->
+                    <button class="btn btn-warning but"  ng-click="edit(bairro)">Edit</button>
+                    <button class="btn btn-danger but" ng-click="deletarBairro(bairro)">Del</button>
                 </td>
             </tr>
         </tbody>
     </table>
+
+    <form name="bairroForm" ng-if="bairro">
+        <hr />
+        <label for="nomeDoBairro" class="style-label">Nome do Bairro<span>*</span></label>
+        <input class="form-control" type="text" ng-model="bairro.nome" id="nomeDoBairro" name="nomeDoBairro" ng-required="true" ng-minLength="10" />
+
+        <label for="valorDoIptu" class="style-label">Valor do IPTU<span>*</span></label>
+        <input class="form-control" type="text" ng-model="bairro.iptu" id="valorDoIptu" name="valorDoIptu" ng-required="true" ng-minLength="2" />
+
+        <button class="btn btn-success" ng-click="editarBairro(bairro)" ng-disabled="bairroForm.$invalid" >Atualizar</button>
+    </form>
 
     <hr />
 

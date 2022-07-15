@@ -16,19 +16,9 @@
       "iptu": "433.33"
     },
     {
-      "iptu": 499.65,
-      "nome": "Bairro da Flores",
+      "nome": "Bairro da Discoteca",
+      "iptu": "444.332",
       "id": 4
-    },
-    {
-      "nome": "Casa do Carai",
-      "iptu": 99.99,
-      "id": 5
-    },
-    {
-      "nome": "Bairro da Carroça",
-      "iptu": 1999.97,
-      "id": 6
     }
   ],
   "enderecos": [

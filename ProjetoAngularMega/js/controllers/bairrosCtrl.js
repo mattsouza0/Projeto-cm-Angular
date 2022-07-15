@@ -7,4 +7,5 @@ angular.module("exe2").controller("bairrosCtrl", function ($scope, bairrosAPI, $
             $location.path("/bairros");
         });
     };
+    
 });
