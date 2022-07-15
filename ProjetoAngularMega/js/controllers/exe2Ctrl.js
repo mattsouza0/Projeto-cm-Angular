@@ -1,4 +1,4 @@
-angular.module("exe2").controller("exe2Ctrl", function ($scope, bairros, bairrosAPI, $http, config) {
+angular.module("exe2").controller("exe2Ctrl", function ($scope, bairros, bairrosAPI) {
     $scope.app = "exe 2";
 
     $scope.bairros = bairros.data;
@@ -8,15 +8,11 @@ angular.module("exe2").controller("exe2Ctrl", function ($scope, bairros, bairros
     };
 
     $scope.editarBairro = function (bairro){
-        //bairrosAPI.editBairro(bairro);
-        const nomeDoBairro = document.querySelector("#nomeDoBairro");
-        const valorDoIptu = document.querySelector("#valorDoIptu");
-
-        bairro.nome = nomeDoBairro.value;
-        bairro.iptu = valorDoIptu.value;
-        
-        console.log(nomeDoBairro + " " + valorDoIptu);
-        $http.put(config.baseUrl + "/bairros/" + bairro.id, bairro);
+        bairrosAPI.editBairro(bairro).then(function (response) {
+            delete $scope.bairro;
+            $scope.bairroForm.$setPristine();
+            $location.path("/bairros");
+        });
     }; 
 
     $scope.edit = function (bairro) {

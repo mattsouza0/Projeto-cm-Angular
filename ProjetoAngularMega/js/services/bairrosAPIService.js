@@ -16,11 +16,15 @@ angular.module("exe2").factory("bairrosAPI", function ($http, config) {
     };
 
     var _editBairro = function (bairro) {
-        return $http.put(config.baseUrl + "/bairros/" + bairro.id, function (nome, iptu){
-            $scope.nome = nome;
-            $scope.iptu = iptu;
-        });
+        const nomeDoBairro = document.querySelector("#nomeDoBairro");
+        const valorDoIptu = document.querySelector("#valorDoIptu");
+
+        bairro.nome = nomeDoBairro.value;
+        bairro.iptu = valorDoIptu.value;
+        
+        return $http.put(config.baseUrl + "/bairros/" + bairro.id, bairro);
     };
+
 /*
 
 NO EDIT USAR A MSM LOGICA DO Q TA NO EXE2CTRL 
@@ -35,6 +39,7 @@ NO EDIT USAR A MSM LOGICA DO Q TA NO EXE2CTRL
         getBairros: _getBairros,
         getBairro: _getBairro,
         saveBairro: _saveBairro,
-        deleteBairro: _deleteBairro
+        deleteBairro: _deleteBairro,
+        editBairro: _editBairro
     }
 });

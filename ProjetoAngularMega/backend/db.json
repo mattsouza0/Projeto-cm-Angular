@@ -1,11 +1,6 @@
 {
   "bairros": [
     {
-      "id": 1,
-      "nome": "Bairro Feliz",
-      "iptu": "350.98"
-    },
-    {
       "id": 2,
       "nome": "Bairro da Luz",
       "iptu": "500.02"
@@ -16,8 +11,8 @@
       "iptu": "433.33"
     },
     {
-      "nome": "Bairro da Discoteca",
-      "iptu": "444.332",
+      "nome": "Bairro da Carroça",
+      "iptu": "123.99",
       "id": 4
     }
   ],
