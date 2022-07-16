@@ -11,24 +11,11 @@ angular.module("exe2").config(function ($routeProvider) {
 
     $routeProvider.when("/novoBairro", {
         templateUrl: "view/novoBairro.html",
-        controller: "bairrosCtrl"
+        controller: "novoBairroCtrl" 
     });
-    
-    /*
-    $routeProvider.when("/editarBairro", {
-        templateUrl: "view/editarBairro.html",
-        controller: "exe2Ctrl",
-        resolve: {
-            bairros: function (bairrosAPI) {
-                return bairrosAPI.getBairros();
-            }
-        }
-    });
-    */
 
     $routeProvider.when("/boasVindas", {
-        templateUrl: "view/boasVindas.html",
-        controller: "exe2Ctrl"
+        templateUrl: "view/boasVindas.html"
     });
 
     $routeProvider.when("/error", {

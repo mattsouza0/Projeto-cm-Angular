@@ -1,1 +1,1 @@
-angular.module("exe2", ["ngMessages", "ngRoute"]);
+angular.module("exe2", ["ngRoute", "ngMessages"]);

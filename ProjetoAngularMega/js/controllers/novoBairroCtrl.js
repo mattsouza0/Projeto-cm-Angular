@@ -1,4 +1,4 @@
-angular.module("exe2").controller("bairrosCtrl", function ($scope, bairrosAPI, $location) {
+angular.module("exe2").controller("novoBairroCtrl", function ($scope, bairrosAPI, $location) {
 
     $scope.adicionarBairro = function (bairro) {
         bairrosAPI.saveBairro (bairro).then(function (response) {

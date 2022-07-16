@@ -1,7 +1,7 @@
 <div class="container table-responsive-md div-table ">
     <table class="table">
         <caption>Bairros Cadastrados</caption>
-        <thead>
+        <thead ng-show="bairros.length > 0">
             <tr>
                 <th>Código</th>
                 <th>Nome</th>
@@ -15,7 +15,7 @@
                 <td>{{bairro.nome}}</td>
                 <td>{{bairro.iptu | currency}}</td>
                 <td>
-                    <!-- <a href="#!/editarBairro" class="btn btn-warning but">Edit</a> -->
+                    <!--<a href="#!/editarBairro" class="btn btn-warning but">Edit</a> -->
                     <button class="btn btn-warning but"  ng-click="edit(bairro)">Edit</button>
                     <button class="btn btn-danger but" ng-click="deletarBairro(bairro)">Del</button>
                 </td>
@@ -31,10 +31,18 @@
         <label for="valorDoIptu" class="style-label">Valor do IPTU<span>*</span></label>
         <input class="form-control" type="text" ng-model="bairro.iptu" id="valorDoIptu" name="valorDoIptu" ng-required="true" ng-minLength="2" />
 
+        <div ng-show="bairroForm.nomeDoBairro.$error.required && bairroForm.nomeDoBairro.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome do bairro.
+        </div>
+    
+        <div ng-show="bairroForm.valorDoIptu.$error.required && bairroForm.valorDoIptu.$dirty" class="alert alert-danger">
+            Por favor, informe o valor do IPTU.
+        </div>
+
         <button class="btn btn-success" ng-click="editarBairro(bairro)" ng-disabled="bairroForm.$invalid" >Atualizar</button>
     </form>
 
     <hr />
 
-    <a href="#!/novoBairro" class="btn btn-primary">Novo Bairro</a>
+    <a href="#!/novoBairro" ng-hide="bairro" class="btn btn-primary">Novo Bairro</a>
 </div>

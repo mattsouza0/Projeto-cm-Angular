@@ -1,19 +1,14 @@
 {
   "bairros": [
     {
-      "id": 2,
-      "nome": "Bairro da Luz",
-      "iptu": "500.02"
+      "nome": "Bairro do Fut",
+      "iptu": 899.99,
+      "id": 1
     },
     {
-      "id": 3,
-      "nome": "Bairro do Escuro",
-      "iptu": "433.33"
-    },
-    {
-      "nome": "Bairro da Carroça",
-      "iptu": "123.99",
-      "id": 4
+      "nome": "Bairro sem Asfalto",
+      "iptu": 579.89,
+      "id": 2
     }
   ],
   "enderecos": [
