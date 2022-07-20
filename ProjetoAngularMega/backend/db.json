@@ -49,18 +49,6 @@
         "id": 3,
         "nome": "Bairro Cachoeira"
       }
-    },
-    {
-      "rua": "Rua Alberto Freire",
-      "numero": 432,
-      "complemento": "Qd.23 Lt.09",
-      "cep": "54925-215",
-      "bairro": {
-        "nome": "Bairro do Escuro",
-        "iptu": 89.99,
-        "id": 2
-      },
-      "id": 4
     }
   ],
   "profissoes": [
