@@ -15,15 +15,7 @@ angular.module("exe2").factory("bairrosAPI", function ($http, config) {
         return $http.delete(config.baseUrl + "/bairros/" + bairro.id);
     };
 
-    var _editBairro = function (bairro) {
-        /*
-        const nomeDoBairro = document.querySelector("#nomeDoBairro");
-        const valorDoIptu = document.querySelector("#valorDoIptu");
-
-        bairro.nome = nomeDoBairro.value;
-        bairro.iptu = valorDoIptu.value;
-        */
-        
+    var _editBairro = function (bairro) {  
         return $http.put(config.baseUrl + "/bairros/" + bairro.id, bairro);
     };
 

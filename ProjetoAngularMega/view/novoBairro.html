@@ -6,6 +6,7 @@
     <form name="bairroForm">
         <label for="nomeDoBairro" class="style-label">Nome do Bairro<span>*</span></label>
         <input class="form-control" type="text" ng-model="bairro.nome" placeholder="Nome do Bairro"  id="nomeDoBairro" name="nomeDoBairro" ng-required="true" ng-minLength="10" />
+        
         <label for="valorDoIptu" class="style-label">Valor do IPTU<span>*</span></label>
         <input class="form-control" type="number" ng-model="bairro.iptu" placeholder="IPTU" id="valorDoIptu" name="valorDoIptu" ng-required="true" ng-minLength="2">
     </form>
@@ -22,4 +23,5 @@
     </div>
 
     <button class="btn btn-success" ng-click="adicionarBairro(bairro)" ng-disabled="bairroForm.$invalid" >Adicionar Bairro</button>
+    
 </div>

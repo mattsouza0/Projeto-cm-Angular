@@ -19,10 +19,12 @@
     <script src="js/app.js"></script>
 
     <!-- Ctrl -->
+    <script src="js/controllers/novoEnderecoCtrl.js"></script>
     <script src="js/controllers/novoBairroCtrl.js"></script>
     <script src="js/controllers/exe2Ctrl.js"></script>
 
     <!-- Service -->
+    <script src="js/services/enderecosAPIService.js"></script>
     <script src="js/services/bairrosAPIService.js"></script>
 
     <!-- Value -->
@@ -42,15 +44,16 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark bg-custom">
             <div class="container">
-                <a class="navbar-brand mb-0 h1" href="#!/boasVindas">Exercício 2</a>
+                <a class="navbar-brand mb-0 h1">Exercício 2</a>
                 <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav nav-tabs">
                         <li class="nav-item active"><a href="#!/boasVindas" class="nav-link">Home</a></li>
+                        <li class="nav-item active"><a href="#!/novaPessoa" class="nav-link">Novo Cadastro</a></li>
                         <li class="nav-item dropdown"><a href="#visualizacao" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Visualização</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a href="#!/bairros" class="dropdown-item">Bairros</a></li>
-                            <li><a href="#" class="dropdown-item">Endereços</a></li>
+                            <li><a href="#!/enderecos" class="dropdown-item">Endereços</a></li>
                             <li><a href="#" class="dropdown-item">Feature #3</a></li>
                         </ul>
                         </li>
@@ -67,8 +70,6 @@
     <main>
         <div ng-view></div>
     </main>
-
-    <!-- USAR A MSM LOGICA DE QUANDO APERTA NO LINK (DO EXECICIO DA LISTA TELEFONICA) E MUDA PRA A OUTRA TELA, NESSE CASO SERIA A TELA DA TABLE DOS BAIRROS E DE CADASTRO DE BAIRROS-->
 
     <footer>
         <p>Desenvolvido por Mateus Almeida</p>

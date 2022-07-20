@@ -38,13 +38,13 @@ footer {
     margin-top: auto;
 }
 
-/* Tabela Bairro */
+/* Tabela */
 
 .div-table {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: .3rem;
-    width: 700px;
+    width: 900px;
     text-align: center;
     margin-left: auto; /* centraliza */
     margin-right: auto; /* centraliza */

@@ -1,38 +1,66 @@
 {
   "bairros": [
     {
-      "nome": "Bairro do Fut",
-      "iptu": 899.99,
+      "nome": "Bairro da Luz",
+      "iptu": 188.92,
       "id": 1
     },
     {
-      "nome": "Bairro sem Asfalto",
-      "iptu": 579.89,
+      "nome": "Bairro do Escuro",
+      "iptu": 89.99,
       "id": 2
+    },
+    {
+      "nome": "Bairro Cachoeira",
+      "iptu": 699.78,
+      "id": 3
     }
   ],
   "enderecos": [
     {
       "id": 1,
       "rua": "Rua Otto Sommer",
-      "numero": "543",
+      "numero": 543,
       "complemento": "Qd.12 Lt.20",
       "cep": "86015-270",
       "bairro": {
-        "id": 2,
+        "id": 1,
         "nome": "Bairro da Luz"
       }
     },
     {
       "id": 2,
       "rua": "Rua Carlos Nascimento",
-      "numero": "321",
+      "numero": 321,
       "complemento": "Qd.01 Lt.10",
       "cep": "13785-432",
       "bairro": {
-        "id": 1,
-        "nome": "Bairro Feliz"
+        "id": 2,
+        "nome": "Bairro do Escuro"
       }
+    },
+    {
+      "id": 3,
+      "rua": "Rua Silvia Silva",
+      "numero": 721,
+      "complemento": "Qd.11 Lt.01",
+      "cep": "44795-139",
+      "bairro": {
+        "id": 3,
+        "nome": "Bairro Cachoeira"
+      }
+    },
+    {
+      "rua": "Rua Alberto Freire",
+      "numero": 432,
+      "complemento": "Qd.23 Lt.09",
+      "cep": "54925-215",
+      "bairro": {
+        "nome": "Bairro do Escuro",
+        "iptu": 89.99,
+        "id": 2
+      },
+      "id": 4
     }
   ],
   "profissoes": [
@@ -45,6 +73,11 @@
       "id": 2,
       "nome": "Faxineiro",
       "salario": "1390"
+    },
+    {
+      "id": 3,
+      "nome": "Comerciante Individual de Fármacos",
+      "salario": "14800"
     }
   ],
   "pessoas": [

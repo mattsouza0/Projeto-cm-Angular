@@ -1,0 +1,52 @@
+<div class="div-form">
+    <h3 class="titulos">Cadastro de Endereço</h3>
+
+    <hr />
+
+    <form name="enderecoForm">
+
+        <label for="nomeDaRua" class="style-label">Rua<span>*</span></label>
+        <input class="form-control" type="text" ng-model="endereco.rua" id="nomeDaRua" name="nomeDaRua" ng-required="true" ng-minLength="2" />
+    
+        <label for="numeroDoEndereco" class="style-label">Número<span>*</span></label>
+        <input class="form-control" type="number" ng-model="endereco.numero" id="numeroDoEndereco" name="numeroDoEndereco" ng-required="true" ng-minLength="1" />
+    
+        <label for="complemento" class="style-label">Complemento<span>*</span></label>
+        <input class="form-control" type="text" ng-model="endereco.complemento" id="complemento" name="complemento" ng-required="true" ng-minLength="4" />
+    
+        <label for="cep" class="style-label">CEP<span>*</span></label>
+        <input class="form-control" type="text" ng-model="endereco.cep" id="cep" name="cep" ng-required="true" ng-minLength="9">
+        <!-- aplicar um filtro aq para o cep-->
+    
+        <label for="bairro" class="style-label">Bairro<span>*</span></label>
+        <select class="form-control" name="bairro" ng-required="true" ng-model="endereco.bairro" ng-options="bairro.nome + ' ( ' + 'ID: ' + (bairro.id) + ' )' for bairro in bairros">
+            <option value="">Selecione um Bairro</option>
+        </select>
+    
+        <div ng-show="enderecoForm.nomeDaRua.$error.required && enderecoForm.nomeDaRua.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome da rua.
+        </div>
+    
+        <div ng-show="enderecoForm.numeroDoEndereco.$error.required && enderecoForm.numeroDoEndereco.$dirty" class="alert alert-danger">
+            Por favor, informe o número.
+        </div>
+
+        <div ng-show="enderecoForm.complemento.$error.required && enderecoForm.complemento.$dirty" class="alert alert-danger">
+            Por favor, informe o complemento.
+        </div>
+
+        <div ng-show="enderecoForm.cep.$error.required && enderecoForm.cep.$dirty" class="alert alert-danger">
+            Por favor, informe o CEP.
+        </div>
+
+        <div ng-show="enderecoForm.bairro.$error.required && enderecoForm.bairro.$dirty" class="alert alert-danger">
+            Por favor, informe o bairro.
+        </div>
+    </form>
+
+    <hr />
+
+    <button class="btn btn-success" ng-click="adicionarEndereco(endereco)" ng-disabled="enderecoForm.$invalid" >Adicionar Endereco</button>
+</div>
+
+
