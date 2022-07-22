@@ -1,0 +1,49 @@
+<div class="container table-responsive-md div-table"> 
+    <table class="table">                    
+        <caption>Profissões Cadastradas</caption>
+        <thead ng-show="profissoes.length > 0">
+            <tr>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>Salário</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="profissao in profissoes | filter:criterioDeBusca">
+                <td>{{profissao.id}}</td>
+                <td>{{profissao.nome}}</td>
+                <td>{{profissao.salario}}</td>
+                <td>
+                    <button class="btn btn-warning but"  ng-click="edit(profissao)">Edit</button>
+                    <button class="btn btn-danger but" ng-click="deletarProfissao(profissao)">Del</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form name="profissaoForm" ng-if="profissao">
+
+        <hr />
+
+        <label for="nomeDaProfissao" class="style-label">Profissão<span>*</span></label>
+        <input class="form-control" type="text" ng-model="profissao.nome" id="nomeDaProfissao" name="nomeDaProfissao" ng-required="true" ng-minLength="5" />
+
+        <label for="salario" class="style-label">Salário<span>*</span></label>
+        <input class="form-control" type="number" ng-model="profissao.salario" id="salario" name="salario" ng-required="true" ng-minLength="3" />
+
+        <div ng-show="profissaoForm.nomeDaProfissao.$error.required && profissaoForm.nomeDaProfissao.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome da profissão.
+        </div>
+    
+        <div ng-show="profissaoForm.salario.$error.required && profissaoForm.salario.$dirty" class="alert alert-danger">
+            Por favor, informe o salário.
+        </div>
+
+        <button class="btn btn-success" ng-click="editarProfissao(profissao)" ng-disabled="profissaoForm.$invalid">Atualizar</button>
+    </form>
+
+    <hr />
+
+    <a href="#!/novaProfissao" ng-hide="profissao" class="btn btn-primary">Nova Profissão</a>
+</div>

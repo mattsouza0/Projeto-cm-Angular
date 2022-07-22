@@ -3,7 +3,7 @@ angular.module("exe2").factory("enderecosAPI", function ($http, config) {
         return $http.get(config.baseUrl + "/enderecos");
     };
     
-    var _getEndereco = function (id){
+    var _getEndereco = function (id) {
         return $http.get(config.baseUrl + "/enderecos/" + id);
     };
 

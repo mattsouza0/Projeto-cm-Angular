@@ -1,0 +1,25 @@
+<div class="div-form">
+    <h3 class="titulos">Cadastro de Profissão</h3>
+
+    <hr />
+
+    <form name="profissaoForm" >
+        <label for="nomeDaProfissao" class="style-label">Profissão<span>*</span></label>
+        <input class="form-control" type="text" ng-model="profissao.nome" id="nomeDaProfissao" name="nomeDaProfissao" ng-required="true" ng-minLength="5" />
+
+        <label for="salario" class="style-label">Salário<span>*</span></label>
+        <input class="form-control" type="number" ng-model="profissao.salario" id="salario" name="salario" ng-required="true" ng-minLength="3" />
+
+        <div ng-show="profissaoForm.nomeDaProfissao.$error.required && profissaoForm.nomeDaProfissao.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome da profissão.
+        </div>
+    
+        <div ng-show="profissaoForm.salario.$error.required && profissaoForm.salario.$dirty" class="alert alert-danger">
+            Por favor, informe o salário.
+        </div>
+    </form>
+
+    <hr />
+
+    <button class="btn btn-success" ng-click="adicionarProfissao(profissao)" ng-disabled="profissaoForm.$invalid">Adicionar Profissão</button>
+</div>

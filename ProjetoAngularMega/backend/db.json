@@ -55,17 +55,17 @@
     {
       "id": 1,
       "nome": "Porteiro",
-      "salario": "1498.98"
+      "salario": 1498.98
     },
     {
       "id": 2,
       "nome": "Faxineiro",
-      "salario": "1390"
+      "salario": 1398.98
     },
     {
       "id": 3,
       "nome": "Comerciante Individual de Fármacos",
-      "salario": "14800"
+      "salario": 14887.98
     }
   ],
   "pessoas": [
@@ -82,7 +82,7 @@
       "endereco": {
         "id": 2,
         "rua": "Rua Carlos Nascimento",
-        "numero": "321",
+        "numero": 321,
         "complemento": "Qd.01 Lt.10",
         "cep": "13785-432",
         "bairro": {
@@ -98,7 +98,7 @@
   "compras": [
     {
       "id": 1,
-      "valorTotal": "499.99",
+      "valorTotal": 499.99,
       "pessoa": {
         "id": 1,
         "nome": "Adalberto Franco"
@@ -109,7 +109,7 @@
     {
       "id": 1,
       "nome": "Luva Gucci",
-      "valor": "400.00",
+      "valor": 400,
       "compra": {
         "id": 1
       }
@@ -117,7 +117,7 @@
     {
       "id": 2,
       "nome": "Adesivos Gucci",
-      "valor": "99.99",
+      "valor": 99.99,
       "compra": {
         "id": 1
       }

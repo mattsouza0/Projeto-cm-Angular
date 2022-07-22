@@ -18,6 +18,7 @@ angular.module("exe2").config(function ($routeProvider) {
             }
         }
     });                                      
+    
 
     $routeProvider.when("/enderecos", {
         templateUrl: "view/endereco/enderecos.html",
@@ -41,6 +42,26 @@ angular.module("exe2").config(function ($routeProvider) {
             },
             enderecos: function (enderecosAPI) { 
                 return enderecosAPI.getEnderecos(); 
+            }
+        }
+    });
+
+    $routeProvider.when("/profissoes", {
+        templateUrl: "view/profissao/profissoes.html",
+        controller: "profissaoCtrl",
+        resolve: {
+            profissoes: function (profissoesAPI) {
+                return profissoesAPI.getProfissoes();
+            }
+        }
+    });
+
+    $routeProvider.when("/novaProfissao", {
+        templateUrl: "view/profissao/novaProfissao.html",
+        controller: "profissaoCtrl",
+        resolve: { // TALVEZ N PRECISE CARREGAR ESTA API (TESTAR DPS QUNDO TD TIVER PRONTO)
+            profissoes: function (profissoesAPI) {
+                return profissoesAPI.getProfissoes();
             }
         }
     });
