@@ -1,0 +1,104 @@
+<div class="div-form">
+    <h3 class="titulos">Cadastro de Endereço</h3>
+
+    <hr />
+
+    <form name="pessoaForm">
+        <label for="nomeDaPessoa" class="style-label">Pessoa<span>*</span></label>
+        <input class="form-control" type="text" ng-model="pessoa.nome" id="nomeDaPessoa" name="nomeDaPessoa" ng-required="true" ng-minLength="5" />
+
+        <label for="dataDeNascimento" class="style-label">Data de Nascimento<span>*</span></label>
+        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" ng-required="true" ng-minLength="8" />
+
+        <label for="sexo" class="style-label">Sexo</label><span>*</span></label>
+        <select class="form-control" type="text" ng-model="pessoa.sexo" id="sexo" name="sexo" ng-required="true">
+            <option value="">Selecione um Sexo</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <label for="pcd" class="style-label">É portador de necessidades especiais?<span>*</span></label>
+        <div class="form-group form-check"> 
+            <input class="form-check-input" type="radio" id="pcd" name="pcd" value="Sim" ng-required="true" />
+            <label class="form-check-label" for="pcd">Sim</label>
+        </div>
+        <div class="form-group form-check">
+            <input class="form-check-input" type="radio" id="pcd" name="pcd" value="Não" ng-required="true" />
+            <label class="form-check-label" for="pcd">Não</label>
+        </div>
+
+        <label for="altura" class="style-label">Altura<span>*</span></label>
+        <input class="form-control" type="text" ng-model="pessoa.altura" id="altura" name="altura" ng-required="true" ng-minLength="3" />
+
+        <label for="peso" class="style-label">Peso<span>*</span></label>
+        <input class="form-control" type="text" ng-model="pessoa.peso" id="peso" name="peso" ng-required="true" ng-minLength="3" />
+
+        <label for="cpf" class="style-label">CPF<span>*</span></label>
+        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" ng-required="true" ng-minLength="11" />
+
+        <label for="tipo" class="style-label">Tipo de Pessoa</label><span>*</span></label>
+        <select class="form-control" type="text" ng-model="pessoa.tipo" id="tipo" name="tipo" ng-required="true">
+            <option value="">Selecione o Tipo</option>
+            <option value="Física">Física</option>
+            <option value="Jurídica">Jurídica</option>
+            <option value="Especial">Especial</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <label for="endereco" class="style-label">Endereço<span>*</span></label>
+        <select class="form-control" name="endereco" ng-required="true" ng-model="pessoa.endereco" ng-options=" ' ( ' + 'ID: ' + (endereco.id) + ' )' + ' Rua: ' + endereco.rua + ' CEP: ' + endereco.cep for endereco in enderecos">
+            <option value="">Selecione um Endereço</option>
+        </select>
+
+        <label for="nomeDaProfissao" class="style-label">Profissão<span>*</span></label>
+        <select class="form-control" name="nomeDaProfissao" id="nomeDaProfissao" ng-required="true" ng-model="pessoa.profissao" ng-options="profissao.nome + ' ( ' + 'ID: ' + (profissao.id) + ' )' for profissao in profissoes">
+            <option value="">Selecione uma Profissão</option>
+        </select>
+
+        <div ng-show="pessoaForm.nomeDaPessoa.$error.required && pessoaForm.nomeDaPessoa.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome da pessoa.
+        </div>
+
+        <div ng-show="pessoaForm.dataDeNascimento.$error.required && pessoaForm.dataDeNascimento.$dirty" class="alert alert-danger">
+            Por favor, preencha a data de nascimento.
+        </div>
+
+        <div ng-show="pessoaForm.sexo.$error.required && pessoaForm.sexo.$dirty" class="alert alert-danger">
+            Por favor, preencha o sexo.
+        </div>
+
+        <div ng-show="pessoaForm.pcd.$error.required && pessoaForm.pcd.$dirty" class="alert alert-danger">
+            Por favor, informe se é uma pessoa com deficiencia.
+        </div>
+
+        <div ng-show="pessoaForm.altura.$error.required && pessoaForm.altura.$dirty" class="alert alert-danger">
+            Por favor, preencha a altura.
+        </div>
+
+        <div ng-show="pessoaForm.peso.$error.required && pessoaForm.peso.$dirty" class="alert alert-danger">
+            Por favor, preencha o peso.
+        </div>
+
+        <div ng-show="pessoaForm.cpf.$error.required && pessoaForm.cpf.$dirty" class="alert alert-danger">
+            Por favor, preencha o CPF.
+        </div>
+
+        <div ng-show="pessoaForm.tipo.$error.required && pessoaForm.tipo.$dirty" class="alert alert-danger">
+            Por favor, preencha o tipo de pessoa.
+        </div>
+
+        <div ng-show="pessoaForm.endereco.$error.required && pessoaForm.endereco.$dirty" class="alert alert-danger">
+            Por favor, preencha o endereco.
+        </div>
+
+        <div ng-show="pessoaForm.nomeDaProfissao.$error.required && pessoaForm.nomeDaProfissao.$dirty" class="alert alert-danger">
+            Por favor, preencha o nome da profissão.
+        </div>
+    </form>
+
+    <hr />
+
+    <button class="btn btn-success" ng-click="adicionarPessoa(pessoa)" ng-disabled="pessoaForm.$invalid" >Adicionar Pessoa</button>
+
+</div>
