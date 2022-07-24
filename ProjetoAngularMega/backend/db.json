@@ -74,11 +74,34 @@
       "nome": "Adalberto Franco",
       "dataDeNascimento": "12/12/2012",
       "sexo": "Masculino",
-      "pcd": "sim",
+      "pcd": "Sim",
       "altura": "1,32",
       "peso": "98.3",
       "cpf": "440.347.930-82",
       "tipo": "Física",
+      "endereco": {
+        "id": 1,
+        "rua": "Rua Otto Sommer",
+        "numero": 543,
+        "complemento": "Qd.12 Lt.20",
+        "cep": "86015-270",
+        "bairro": {
+          "id": 1,
+          "nome": "Bairro da Luz"
+        }
+      },
+      "profissao": {
+        "id": 2,
+        "nome": "Faxineiro",
+        "salario": 1398.98
+      }
+    },
+    {
+      "profissao": {
+        "id": 3,
+        "nome": "Comerciante Individual de Fármacos",
+        "salario": 14887.98
+      },
       "endereco": {
         "id": 2,
         "rua": "Rua Carlos Nascimento",
@@ -86,13 +109,19 @@
         "complemento": "Qd.01 Lt.10",
         "cep": "13785-432",
         "bairro": {
-          "nome": "Bairro Feliz"
+          "id": 2,
+          "nome": "Bairro do Escuro"
         }
       },
-      "profissao": {
-        "id": 1,
-        "nome": "Porteiro"
-      }
+      "tipo": "Jurídica",
+      "cpf": "551.956.231-03",
+      "peso": "67.6",
+      "altura": "1,87",
+      "sexo": "Masculino",
+      "dataDeNascimento": "12/12/2012",
+      "nome": "Irinei da Silva Costa",
+      "id": 2,
+      "pcd": "Não"
     }
   ],
   "compras": [

@@ -1,4 +1,5 @@
 angular.module("exe2").config(function ($routeProvider) {
+    //View bairros
     $routeProvider.when("/bairros", {
         templateUrl: "view/bairro/bairros.html",
         controller: "bairroCtrl",
@@ -17,9 +18,10 @@ angular.module("exe2").config(function ($routeProvider) {
                 return bairrosAPI.getBairros();
             }
         }
-    });                                      
-    
+    });          
 
+    
+    //View endereços
     $routeProvider.when("/enderecos", {
         templateUrl: "view/endereco/enderecos.html",
         controller: "enderecoCtrl",
@@ -46,6 +48,8 @@ angular.module("exe2").config(function ($routeProvider) {
         }
     });
 
+
+    //View profissões
     $routeProvider.when("/profissoes", {
         templateUrl: "view/profissao/profissoes.html",
         controller: "profissaoCtrl",
@@ -66,6 +70,48 @@ angular.module("exe2").config(function ($routeProvider) {
         }
     });
 
+
+    //View pessoas
+    $routeProvider.when("/pessoas", {
+        templateUrl: "view/pessoa/pessoas.html",
+        controller: "pessoaCtrl",
+        resolve: {
+            pessoas: function (pessoasAPI){
+                return pessoasAPI.getPessoas();
+            },
+            profissoes: function (profissoesAPI) {
+                return profissoesAPI.getProfissoes();
+            },
+            enderecos: function (enderecosAPI) { 
+                return enderecosAPI.getEnderecos(); 
+            },
+            bairros: function (bairrosAPI) {
+                return bairrosAPI.getBairros();
+            }
+        }
+    });
+
+    $routeProvider.when("/novaPessoa", {
+        templateUrl: "view/pessoa/novaPessoa.html",
+        controller: "pessoaCtrl",
+        resolve: {
+            pessoas: function (pessoasAPI){
+                return pessoasAPI.getPessoas();
+            },
+            profissoes: function (profissoesAPI) {
+                return profissoesAPI.getProfissoes();
+            },
+            enderecos: function (enderecosAPI) { 
+                return enderecosAPI.getEnderecos(); 
+            },
+            bairros: function (bairrosAPI) {
+                return bairrosAPI.getBairros();
+            }
+        }
+    });
+
+
+    //View error e boas vindas
     $routeProvider.when("/boasVindas", {
         templateUrl: "view/boasVindas.html"
     });

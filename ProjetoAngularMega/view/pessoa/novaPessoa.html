@@ -1,16 +1,16 @@
 <div class="div-form">
-    <h3 class="titulos">Cadastro de Endereço</h3>
+    <h3 class="titulos">Cadastro de Pessoa</h3>
 
     <hr />
 
     <form name="pessoaForm">
         <label for="nomeDaPessoa" class="style-label">Pessoa<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.nome" id="nomeDaPessoa" name="nomeDaPessoa" ng-required="true" ng-minLength="5" />
+        <input class="form-control" type="text" ng-model="pessoa.nome" id="nomeDaPessoa" name="nomeDaPessoa" placeholder="Nome da Pessoa" ng-required="true" ng-minLength="5" />
 
         <label for="dataDeNascimento" class="style-label">Data de Nascimento<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" ng-required="true" ng-minLength="8" />
+        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" placeholder="DD/MM/AAAA" ng-required="true" ng-minLength="8" />
 
-        <label for="sexo" class="style-label">Sexo</label><span>*</span></label>
+        <label for="sexo" class="style-label">Sexo<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.sexo" id="sexo" name="sexo" ng-required="true">
             <option value="">Selecione um Sexo</option>
             <option value="Masculino">Masculino</option>
@@ -29,15 +29,15 @@
         </div>
 
         <label for="altura" class="style-label">Altura<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.altura" id="altura" name="altura" ng-required="true" ng-minLength="3" />
+        <input class="form-control" type="text" ng-model="pessoa.altura" id="altura" name="altura" placeholder="Altura da Pessoa" ng-required="true" ng-minLength="3" />
 
         <label for="peso" class="style-label">Peso<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.peso" id="peso" name="peso" ng-required="true" ng-minLength="3" />
+        <input class="form-control" type="text" ng-model="pessoa.peso" id="peso" name="peso" placeholder="Peso da Pessoa" ng-required="true" ng-minLength="3" />
 
         <label for="cpf" class="style-label">CPF<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" ng-required="true" ng-minLength="11" />
+        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" ng-required="true" ng-minLength="11" />
 
-        <label for="tipo" class="style-label">Tipo de Pessoa</label><span>*</span></label>
+        <label for="tipo" class="style-label">Tipo de Pessoa<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.tipo" id="tipo" name="tipo" ng-required="true">
             <option value="">Selecione o Tipo</option>
             <option value="Física">Física</option>

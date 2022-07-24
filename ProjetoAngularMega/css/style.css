@@ -39,16 +39,19 @@ footer {
 }
 
 /* Tabela */
-
 .div-table {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: .3rem;
-    width: 900px;
+    width: 850px;
     text-align: center;
-    margin-left: auto; /* centraliza */
-    margin-right: auto; /* centraliza */
+    margin-left: auto; 
+    margin-right: auto; 
     margin-top: 20px;
+}
+
+.tamanho-pessoas {
+    width: auto;
 }
 
 table {
@@ -125,4 +128,8 @@ span {
     border: 0px;
     font-size: 19px;
     color: #1b2845;
+}
+
+.form-check {
+    text-align: left;
 }
