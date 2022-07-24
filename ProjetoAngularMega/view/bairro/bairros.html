@@ -1,5 +1,5 @@
-<div class="container table-responsive-md div-table"> 
-    <table class="table">                    
+<div class="container  div-table"> 
+    <table class="table table-responsive-md">                    
         <caption>Bairros Cadastrados</caption>
         <thead ng-show="bairros.length > 0">
             <tr>
@@ -14,7 +14,7 @@
                 <td>{{bairro.id}}</td>
                 <td>{{bairro.nome}}</td>
                 <td>{{bairro.iptu | currency}}</td>
-                <td>
+                <td nowrap>
                     <!--<a href="#!/editarBairro" class="btn btn-warning but">Edit</a> -->
                     <button class="btn btn-warning but"  ng-click="edit(bairro)">Edit</button>
                     <button class="btn btn-danger but" ng-click="deletarBairro(bairro)">Del</button>

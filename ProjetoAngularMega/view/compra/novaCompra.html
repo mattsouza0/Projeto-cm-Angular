@@ -1,0 +1,27 @@
+<div class="div-form">
+    <h3 class="titulos">Cadastro de Compra</h3>
+
+    <hr />
+
+    <form name="compraForm">
+        <label for="valorTotal" class="style-label">Valor Total<span>*</span></label>
+        <input class="form-control" type="number" ng-model="endereco.rua" id="valorTotal" placeholder="Valor Total" name="valorTotal" ng-required="true" ng-minLength="2" />
+
+        <label for="pessoa" class="style-label">Pessoas<span>*</span></label>
+        <select class="form-control" name="pessoa" ng-required="true" ng-model="compra.pessoa" ng-options="pessoa.nome + ' ( ' + 'Código: ' + (pessoa.id) + ' )' for pessoa in pessoas">
+            <option value="">Escolha a pessoa</option>
+        </select>
+
+        <div ng-show="compraForm.valorTotal.$error.required && compraForm.valorTotal.$dirty" class="alert alert-danger">
+            Por favor, informe o valor total.
+        </div>
+
+        <div ng-show="compraForm.pessoa.$error.required && compraForm.pessoa.$dirty" class="alert alert-danger">
+            Por favor, selecione a pessoa.
+        </div>
+    </form>
+
+    <hr />
+
+    <button class="btn btn-success" ng-click="adicionarCompra(compra)" ng-disabled="compraForm.$invalid" >Adicionar Compra</button>
+</div>

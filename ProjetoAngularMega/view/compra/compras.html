@@ -1,0 +1,51 @@
+<div class="container table-responsive-md div-table"> 
+    <table class="table">                    
+        <caption>Compras Cadastradas</caption>
+        <thead ng-show="compras.length > 0">
+            <tr>
+                <th>Código</th>
+                <th>Valor Total</th>
+                <th>Pessoa</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="compra in compras | filter:criterioDeBusca">
+                <td>{{compra.id}}</td>
+                <td>{{compra.valorTotal}}</td>
+                <td>Código: {{compra.pessoa.id}}, Nome: {{compra.pessoa.nome}}</td>
+                <td nowrap>
+                    <button class="btn btn-warning but"  ng-click="edit(compra)">Edit</button>
+                    <button class="btn btn-danger but" ng-click="deletarCompra(compra)">Del</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form name="compraForm" ng-if="compra">
+
+        <hr />
+
+        <label for="valorTotal" class="style-label">Valor Total<span>*</span></label>
+        <input class="form-control" type="number" ng-model="endereco.rua" id="valorTotal" placeholder="Valor Total" name="valorTotal" ng-required="true" ng-minLength="2" />
+
+        <label for="pessoa" class="style-label">Pessoas<span>*</span></label>
+        <select class="form-control" name="pessoa" ng-required="true" ng-model="compra.pessoa" ng-options="pessoa.nome + ' ( ' + 'ID: ' + (pessoa.id) + ' )' for pessoa in pessoas">
+            <option value="">Escolha a pessoa</option>
+        </select>
+
+        <div ng-show="compraForm.valorTotal.$error.required && compraForm.valorTotal.$dirty" class="alert alert-danger">
+            Por favor, informe o valor total.
+        </div>
+
+        <div ng-show="compraForm.pessoa.$error.required && compraForm.pessoa.$dirty" class="alert alert-danger">
+            Por favor, selecione a pessoa.
+        </div>
+        
+        <button class="btn btn-success" ng-click="editarCompra(compra)" ng-disabled="compraForm.$invalid">Atualizar</button>
+    </form>
+
+    <hr />
+
+    <a href="#!/novaCompra" ng-hide="endereco" class="btn btn-primary">Nova Compra</a>
+</div>
