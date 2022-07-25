@@ -111,6 +111,34 @@ angular.module("exe2").config(function ($routeProvider) {
     });
 
 
+    //View compras             
+    $routeProvider.when("/compras", {
+        templateUrl: "view/compra/compras.html",
+        controller: "compraCtrl",
+        resolve: {
+            compras: function (comprasAPI){
+                return comprasAPI.getCompras();
+            },
+            pessoas: function (pessoasAPI){
+                return pessoasAPI.getPessoas();
+            }
+        }
+    });
+
+    $routeProvider.when("/novaCompra", {
+        templateUrl: "view/compra/novaCompra.html",
+        controller: "compraCtrl",
+        resolve: {
+            compras: function (comprasAPI){
+                return comprasAPI.getCompras();
+            },
+            pessoas: function (pessoasAPI){
+                return pessoasAPI.getPessoas();
+            }
+        }
+    });
+
+
     //View error e boas vindas
     $routeProvider.when("/boasVindas", {
         templateUrl: "view/boasVindas.html"

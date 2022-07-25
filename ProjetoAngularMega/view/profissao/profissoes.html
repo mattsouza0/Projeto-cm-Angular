@@ -1,4 +1,4 @@
-<div class="container table-responsive-md div-table"> 
+<div class="container table-responsive div-table"> 
     <table class="table">                    
         <caption>Profissões Cadastradas</caption>
         <thead ng-show="profissoes.length > 0">
@@ -13,7 +13,7 @@
             <tr ng-repeat="profissao in profissoes | filter:criterioDeBusca">
                 <td>{{profissao.id}}</td>
                 <td>{{profissao.nome}}</td>
-                <td>{{profissao.salario}}</td>
+                <td>{{profissao.salario | currency}}</td>
                 <td nowrap>
                     <button class="btn btn-warning but"  ng-click="edit(profissao)">Edit</button>
                     <button class="btn btn-danger but" ng-click="deletarProfissao(profissao)">Del</button>

@@ -14,6 +14,11 @@
       "nome": "Bairro Cachoeira",
       "iptu": 699.78,
       "id": 3
+    },
+    {
+      "nome": "Bairro das Carroças",
+      "iptu": "1122.92",
+      "id": 4
     }
   ],
   "enderecos": [
@@ -118,9 +123,36 @@
       "peso": "67.6",
       "altura": "1,87",
       "sexo": "Masculino",
-      "dataDeNascimento": "12/12/2012",
+      "dataDeNascimento": "03/03/1003",
       "nome": "Irinei da Silva Costa",
       "id": 2,
+      "pcd": "Não"
+    },
+    {
+      "nome": "Fabio Luiz da Cunha",
+      "dataDeNascimento": "18/04/1899",
+      "sexo": "Masculino",
+      "altura": "1,87",
+      "peso": "67,6",
+      "cpf": "551.956.231-03",
+      "tipo": "Especial",
+      "endereco": {
+        "id": 3,
+        "rua": "Rua Silvia Silva",
+        "numero": 721,
+        "complemento": "Qd.11 Lt.01",
+        "cep": "44795-139",
+        "bairro": {
+          "id": 3,
+          "nome": "Bairro Cachoeira"
+        }
+      },
+      "profissao": {
+        "id": 1,
+        "nome": "Porteiro",
+        "salario": 1498.98
+      },
+      "id": 3,
       "pcd": "Não"
     }
   ],

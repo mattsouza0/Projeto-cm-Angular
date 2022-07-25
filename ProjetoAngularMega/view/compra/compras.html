@@ -1,4 +1,4 @@
-<div class="container table-responsive-md div-table"> 
+<div class="container table-responsive div-table"> 
     <table class="table">                    
         <caption>Compras Cadastradas</caption>
         <thead ng-show="compras.length > 0">
@@ -12,8 +12,8 @@
         <tbody>
             <tr ng-repeat="compra in compras | filter:criterioDeBusca">
                 <td>{{compra.id}}</td>
-                <td>{{compra.valorTotal}}</td>
-                <td>Código: {{compra.pessoa.id}}, Nome: {{compra.pessoa.nome}}</td>
+                <td>{{compra.valorTotal | currency}}</td>
+                <td>Nome: {{compra.pessoa.nome}}, Código: {{compra.pessoa.id}}</td>
                 <td nowrap>
                     <button class="btn btn-warning but"  ng-click="edit(compra)">Edit</button>
                     <button class="btn btn-danger but" ng-click="deletarCompra(compra)">Del</button>
@@ -26,13 +26,11 @@
 
         <hr />
 
-        <label for="valorTotal" class="style-label">Valor Total<span>*</span></label>
-        <input class="form-control" type="number" ng-model="endereco.rua" id="valorTotal" placeholder="Valor Total" name="valorTotal" ng-required="true" ng-minLength="2" />
+        <label for="pessoa" class="style-label">Pessoa<span>*</span></label>
+        <input class="form-control" type="text" ng-model="compra.pessoa.nome" id="valorTotal" name="valorTotal" ng-required="true" ng-minLength="2" disabled />
 
-        <label for="pessoa" class="style-label">Pessoas<span>*</span></label>
-        <select class="form-control" name="pessoa" ng-required="true" ng-model="compra.pessoa" ng-options="pessoa.nome + ' ( ' + 'ID: ' + (pessoa.id) + ' )' for pessoa in pessoas">
-            <option value="">Escolha a pessoa</option>
-        </select>
+        <label for="valorTotal" class="style-label">Valor Total<span>*</span></label>
+        <input class="form-control" type="number" ng-model="compra.valorTotal" id="valorTotal" name="valorTotal" ng-required="true" ng-minLength="2" />
 
         <div ng-show="compraForm.valorTotal.$error.required && compraForm.valorTotal.$dirty" class="alert alert-danger">
             Por favor, informe o valor total.
