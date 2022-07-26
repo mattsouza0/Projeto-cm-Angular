@@ -139,6 +139,34 @@ angular.module("exe2").config(function ($routeProvider) {
     });
 
 
+    //View itens de compra
+    $routeProvider.when("/itemDeCompra", {
+        templateUrl: "view/item/itemDeCompra.html",
+        controller: "itemDeCompraCtrl",
+        resolve: {
+            itensDeCompra: function (itensDeCompraAPI){
+                return itensDeCompraAPI.getItensDeCompra();
+            },
+            compras: function (comprasAPI){
+                return comprasAPI.getCompras();
+            }
+        }
+    });
+
+    $routeProvider.when("/novoItemDeCompra", {
+        templateUrl: "view/item/novoItemDeCompra.html",
+        controller: "itemDeCompraCtrl",
+        resolve: {
+            itensDeCompra: function (itensDeCompraAPI){
+                return itensDeCompraAPI.getItensDeCompra();
+            },
+            compras: function (comprasAPI){
+                return comprasAPI.getCompras();
+            }
+        }
+    });
+
+
     //View error e boas vindas
     $routeProvider.when("/boasVindas", {
         templateUrl: "view/boasVindas.html"

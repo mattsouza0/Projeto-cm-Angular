@@ -17,14 +17,14 @@
                 <td>{{itemDeCompra.valor | currency}}</td>
                 <td>Código da Compra: {{itemDeCompra.compra.id}}</td>
                 <td nowrap>
-                    <button class="btn btn-warning but"  ng-click="edit(item)">Edit</button>
-                    <button class="btn btn-danger but" ng-click="deletarItem(item)">Del</button>
+                    <button class="btn btn-warning but"  ng-click="edit(itemDeCompra)">Edit</button>
+                    <button class="btn btn-danger but" ng-click="deletarItem(itemDeCompra)">Del</button>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <form name="itemForm" ng-if="item">
+    <form name="itemForm" ng-if="itemDeCompra">
         <hr />
 
         <label for="nome" class="style-label">Nome do Item<span>*</span></label>
@@ -50,10 +50,10 @@
             Por favor, selecione o id de uma compra.
         </div>
         
-        <button class="btn btn-success" ng-click="editarItem(item)" ng-disabled="itemForm.$invalid">Atualizar</button>
+        <button class="btn btn-success" ng-click="editarItem(itemDeCompra)" ng-disabled="itemForm.$invalid">Atualizar</button>
     </form>
 
     <hr />
 
-    <a href="#!/novaCompra" ng-hide="endereco" class="btn btn-primary">Nova Compra</a>
+    <a href="#!/novoItemDeCompra" ng-hide="endereco" class="btn btn-primary">Nova Compra</a>
 </div>

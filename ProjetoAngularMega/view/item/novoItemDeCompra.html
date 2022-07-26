@@ -5,10 +5,10 @@
 
     <form name="itemForm">
         <label for="nome" class="style-label">Nome do Item<span>*</span></label>
-        <input class="form-control" type="text" ng-model="itemDeCompra.nome" id="nome" name="nome" ng-required="true" ng-minLength="5" />
+        <input class="form-control" type="text" ng-model="itemDeCompra.nome" id="nome" name="nome" placeholder="Nome do Item" ng-required="true" ng-minLength="5" />
 
         <label for="valor" class="style-label">Valor do Item<span>*</span></label>
-        <input class="form-control" type="number" ng-model="itemDeCompra.valor" id="valor" name="valor" ng-required="true" ng-minLength="2" />
+        <input class="form-control" type="number" ng-model="itemDeCompra.valor" id="valor" name="valor" placeholder="Valor do Item" ng-required="true" ng-minLength="2" />
 
         <label for="compra" class="style-label">Compra<span>*</span></label>
         <select class="form-control" name="compra" ng-required="true" ng-model="itemDeCompra.compra" ng-options="'Compra de Código: ' + (compra.id) for compra in compras">
@@ -30,6 +30,6 @@
 
     <hr />
 
-    <button class="btn btn-success" ng-click="adicionarItem(item)" ng-disabled="itemForm.$invalid">Adicionar Item</button>
+    <button class="btn btn-success" ng-click="adicionarItem(itemDeCompra)" ng-disabled="itemForm.$invalid">Adicionar Item</button>
 
 </div>
