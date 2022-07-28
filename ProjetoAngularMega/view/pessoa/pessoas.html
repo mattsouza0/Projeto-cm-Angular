@@ -20,8 +20,8 @@
         <tbody>
             <tr ng-repeat="pessoa in pessoas | filter:criterioDeBusca">
                 <td>{{pessoa.id}}</td>
-                <td>{{pessoa.nome}}</td>
-                <td>{{pessoa.dataDeNascimento}}</td>
+                <td>{{pessoa.nome | name}}</td>
+                <td>{{pessoa.dataDeNascimento | date:'dd/MM/yyyy'}}</td>
                 <td>{{pessoa.sexo}}</td>
                 <td>{{pessoa.pcd}}</td>
                 <td>{{pessoa.altura}}</td>
@@ -48,7 +48,7 @@
         <input class="form-control" type="text" ng-model="pessoa.nome" id="nomeDaPessoa" name="nomeDaPessoa" placeholder="Nome da Pessoa" ng-required="true" ng-minLength="5" />
 
         <label for="dataDeNascimento" class="style-label">Data de Nascimento<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" placeholder="DD/MM/AAAA" ng-required="true" ng-minLength="8" />
+        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" placeholder="DD/MM/AAAA" ng-required="true" ng-minLength="8" ui-date />
 
         <label for="sexo" class="style-label">Sexo<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.sexo" id="sexo" name="sexo" ng-required="true">
@@ -75,7 +75,7 @@
         <input class="form-control" type="text" ng-model="pessoa.peso" id="peso" name="peso" placeholder="Peso da Pessoa" ng-required="true" ng-minLength="3" />
 
         <label for="cpf" class="style-label">CPF<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" ng-required="true" ng-minLength="11" />
+        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" ng-required="true" ng-pattern="/^\d{3}.\d{3}.\d{3}-\d{2}$/" ng-minLength="11" />
 
         <label for="tipo" class="style-label">Tipo de Pessoa<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.tipo" id="tipo" name="tipo" ng-required="true">
@@ -96,10 +96,15 @@
             <option value="">Selecione uma Profissão</option>
         </select>
 
-        <div ng-show="pessoaForm.nomeDaPessoa.$error.required && pessoaForm.nomeDaPessoa.$dirty" class="alert alert-danger">
-            Por favor, preencha o nome da pessoa.
+        <div ng-messages="pessoaForm.nomeDaPessoa.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, preencha o nome da pessoa.
+            </div>
+            <div ng-message="minlength" class="alert alert-danger">
+                O nome deve ter no mínimo 5 caracteres.
+            </div>
         </div>
-
+     
         <div ng-show="pessoaForm.dataDeNascimento.$error.required && pessoaForm.dataDeNascimento.$dirty" class="alert alert-danger">
             Por favor, preencha a data de nascimento.
         </div>
