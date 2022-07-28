@@ -29,13 +29,13 @@
         </div>
 
         <label for="altura" class="style-label">Altura<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.altura" id="altura" name="altura" placeholder="Altura da Pessoa" ng-required="true" ng-minLength="3" />
+        <input class="form-control" type="text" ng-model="pessoa.altura" id="altura" name="altura" placeholder="Altura da Pessoa" ng-required="true" ng-minLength="3" ui-altura />
 
         <label for="peso" class="style-label">Peso<span>*</span></label>
         <input class="form-control" type="text" ng-model="pessoa.peso" id="peso" name="peso" placeholder="Peso da Pessoa" ng-required="true" ng-minLength="3" />
 
         <label for="cpf" class="style-label">CPF<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" ng-required="true" ng-pattern="/^\d{3}.\d{3}.\d{3}-\d{2}$/" ng-minLength="11" />
+        <input class="form-control" type="text" ng-model="pessoa.cpf" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" ng-required="true" ng-pattern="/^\d{3}.\d{3}.\d{3}-\d{2}$/" ng-minLength="11" ui-cpf />
 
         <label for="tipo" class="style-label">Tipo de Pessoa<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.tipo" id="tipo" name="tipo" ng-required="true">

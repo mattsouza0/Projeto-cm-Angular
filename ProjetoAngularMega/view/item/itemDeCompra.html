@@ -13,7 +13,7 @@
         <tbody>
             <tr ng-repeat="itemDeCompra in itensDeCompra | filter:criterioDeBusca">
                 <td>{{itemDeCompra.id}}</td>
-                <td>{{itemDeCompra.nome}}</td>
+                <td>{{itemDeCompra.nome | name}}</td>
                 <td>{{itemDeCompra.valor | currency}}</td>
                 <td>Código da Compra: {{itemDeCompra.compra.id}}</td>
                 <td nowrap>

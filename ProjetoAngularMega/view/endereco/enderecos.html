@@ -15,7 +15,7 @@
         <tbody>
             <tr ng-repeat="endereco in enderecos | filter:criterioDeBusca">
                 <td>{{endereco.id}}</td>
-                <td>{{endereco.rua}}</td>
+                <td>{{endereco.rua | name}}</td>
                 <td>{{endereco.numero}}</td>
                 <td>{{endereco.complemento}}</td>
                 <td>{{endereco.cep}}</td>
@@ -42,8 +42,7 @@
         <input class="form-control" type="text" ng-model="endereco.complemento" id="complemento" name="complemento" ng-required="true" ng-minLength="4" />
 
         <label for="cep" class="style-label">CEP<span>*</span></label>
-        <input class="form-control" type="text" ng-model="endereco.cep" id="cep" name="cep" ng-required="true" ng-minLength="9">
-        <!-- aplicar um filtro aq para o cep-->
+        <input class="form-control" type="text" ng-model="endereco.cep" id="cep" name="cep" ng-required="true" ng-minLength="9" ui-cep />
 
         <label for="bairro" class="style-label">Bairro<span>*</span></label>
         <select class="form-control" name="bairro" ng-required="true" ng-model="endereco.bairro" ng-options="bairro.nome + ' ( ' + 'ID: ' + (bairro.id) + ' )' for bairro in bairros">

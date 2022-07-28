@@ -12,7 +12,7 @@
         <tbody>
             <tr ng-repeat="bairro in bairros | filter:criterioDeBusca">
                 <td>{{bairro.id}}</td>
-                <td>{{bairro.nome}}</td>
+                <td>{{bairro.nome | name}}</td>
                 <td>{{bairro.iptu | currency}}</td>
                 <td nowrap>
                     <!--<a href="#!/editarBairro" class="btn btn-warning but">Edit</a> -->

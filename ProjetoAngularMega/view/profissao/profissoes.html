@@ -12,7 +12,7 @@
         <tbody>
             <tr ng-repeat="profissao in profissoes | filter:criterioDeBusca">
                 <td>{{profissao.id}}</td>
-                <td>{{profissao.nome}}</td>
+                <td>{{profissao.nome | name}}</td>
                 <td>{{profissao.salario | currency}}</td>
                 <td nowrap>
                     <button class="btn btn-warning but"  ng-click="edit(profissao)">Edit</button>
