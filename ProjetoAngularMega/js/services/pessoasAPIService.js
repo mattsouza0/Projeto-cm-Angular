@@ -25,7 +25,6 @@ angular.module("exe2").factory("pessoasAPI", function ($http, config) {
         savePessoa: _savePessoa,
         deletePessoa: _deletePessoa,
         editPessoa: _editPessoa
-        
     }
 });
 

@@ -1,4 +1,4 @@
-angular.module("exe2").directive("uiDate", function () { //uiDate la na view tem q usar ui-date
+angular.module("exe2").directive("uiDate", function () {
     return {
         require: "ngModel",
         link: function (scope, element, attrs, ctrl) {

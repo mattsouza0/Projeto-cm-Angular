@@ -20,7 +20,6 @@ angular.module("exe2").factory("profissoesAPI", function ($http, config) {
     };
 
     return {
-        getProfissao: _getProfissao,
         getProfissoes: _getProfissoes,
         saveProfissao: _saveProfissao,
         deleteProfissao: _deleteProfissao,

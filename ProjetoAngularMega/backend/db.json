@@ -11,13 +11,13 @@
       "id": 2
     },
     {
-      "nome": "Bairro da Cachoeira",
+      "nome": "Bairro Cachoeira",
       "iptu": 699.78,
       "id": 3
     },
     {
       "nome": "Bairro das Carroças",
-      "iptu": "1122.92",
+      "iptu": "992",
       "id": 4
     }
   ],
@@ -120,7 +120,7 @@
       },
       "tipo": "Jurídica",
       "cpf": "551.956.231-03",
-      "peso": "67.6",
+      "peso": "144.8",
       "altura": "1,87",
       "sexo": "Masculino",
       "dataDeNascimento": "02/02/1992",

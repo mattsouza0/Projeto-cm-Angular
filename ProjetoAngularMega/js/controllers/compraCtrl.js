@@ -21,4 +21,5 @@ angular.module("exe2").controller("compraCtrl", function ($scope, $location, com
     $scope.deletarCompra = function (compra){
         comprasAPI.deleteCompra(compra);
     };
+    
 });

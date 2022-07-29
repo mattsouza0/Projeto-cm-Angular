@@ -3,10 +3,6 @@ angular.module("exe2").factory("comprasAPI", function ($http, config) {
         return $http.get(config.baseUrl + "/compras");
     };
 
-    var _getCompra = function (id) {
-        return $http.get(config.baseUrl + "/compras/" + id);
-    };
-
     var _saveCompra = function (compra){
         return $http.post(config.baseUrl + "/compras", compra);
     };
@@ -21,7 +17,6 @@ angular.module("exe2").factory("comprasAPI", function ($http, config) {
 
     return {
         getCompras: _getCompras,
-        getCompra: _getCompra,
         saveCompra: _saveCompra,
         deleteCompra: _deleteCompra,
         editCompra: _editCompra

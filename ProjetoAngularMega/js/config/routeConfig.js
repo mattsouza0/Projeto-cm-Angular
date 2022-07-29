@@ -63,7 +63,7 @@ angular.module("exe2").config(function ($routeProvider) {
     $routeProvider.when("/novaProfissao", {
         templateUrl: "view/profissao/novaProfissao.html",
         controller: "profissaoCtrl",
-        resolve: { // TALVEZ N PRECISE CARREGAR ESTA API (TESTAR DPS QUNDO TD TIVER PRONTO)
+        resolve: { 
             profissoes: function (profissoesAPI) {
                 return profissoesAPI.getProfissoes();
             }

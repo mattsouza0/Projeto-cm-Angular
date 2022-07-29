@@ -3,10 +3,6 @@ angular.module("exe2").factory("itensDeCompraAPI", function ($http, config) {
         return $http.get(config.baseUrl + "/itensDeCompra");
     };
 
-    var _getItemDeCompra = function (id) {
-        return $http.get(config.baseUrl + "/itensDeCompra/" + id);
-    };
-
     var _saveItemDeCompra = function (item) {
         return $http.post(config.baseUrl + "/itensDeCompra", item);
     };
@@ -22,7 +18,6 @@ angular.module("exe2").factory("itensDeCompraAPI", function ($http, config) {
 
     return {
         getItensDeCompra: _getItensDeCompra,
-        getItemDeCompra: _getItemDeCompra,
         saveItemDeCompra: _saveItemDeCompra,
         deleteItemDeCompra: _deleteItemDeCompra,
         editItemDeCompra: _editItemDeCompra

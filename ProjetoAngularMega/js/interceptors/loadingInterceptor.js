@@ -9,10 +9,13 @@ angular.module("exe2").factory("loadingInterceptor", function ($q, $rootScope, $
             return $q.reject(rejection);
         },
         response: function (response) {
-            $timeout(function () { // timeout é so pra testa o loading
+            /*
+            //teste da tela de carregamento
+            $timeout(function () { 
                 $rootScope.loading = false;
-            }, 150);
-            //$rootScope.loading = false;
+            }, 500);
+            */
+            $rootScope.loading = false;
             return response;
         },
         responseError: function (rejection) {

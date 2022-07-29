@@ -48,7 +48,7 @@
         <input class="form-control" type="text" ng-model="pessoa.nome" id="nomeDaPessoa" name="nomeDaPessoa" placeholder="Nome da Pessoa" ng-required="true" ng-minLength="5" />
 
         <label for="dataDeNascimento" class="style-label">Data de Nascimento<span>*</span></label>
-        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" placeholder="DD/MM/AAAA" ng-required="true" ng-minLength="8" ui-date />
+        <input class="form-control" type="text" ng-model="pessoa.dataDeNascimento" id="dataDeNascimento" name="dataDeNascimento" placeholder="DD/MM/AAAA" ng-required="true" ng-minLength="10" ui-date />
 
         <label for="sexo" class="style-label">Sexo<span>*</span></label>
         <select class="form-control" type="text" ng-model="pessoa.sexo" id="sexo" name="sexo" ng-required="true">
@@ -104,41 +104,62 @@
                 O nome deve ter no mínimo 5 caracteres.
             </div>
         </div>
-     
-        <div ng-show="pessoaForm.dataDeNascimento.$error.required && pessoaForm.dataDeNascimento.$dirty" class="alert alert-danger">
-            Por favor, preencha a data de nascimento.
+
+        <div ng-messages="pessoaForm.dataDeNascimento.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, preencha a data de nascimento.
+            </div>
+            <div ng-message="minlength" class="alert alert-danger">
+                Preencha a da data completa.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.sexo.$error.required && pessoaForm.sexo.$dirty" class="alert alert-danger">
-            Por favor, preencha o sexo.
+        <div ng-messages="pessoaForm.sexo.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, informe o sexo.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.pcd.$error.required && pessoaForm.pcd.$dirty" class="alert alert-danger">
-            Por favor, informe se é uma pessoa com deficiencia.
+        <div ng-messages="pessoaForm.pcd.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, informe se é uma pessoa com deficiência.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.altura.$error.required && pessoaForm.altura.$dirty" class="alert alert-danger">
-            Por favor, preencha a altura.
+        <div ng-messages="pessoaForm.altura.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, preencha a altura.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.peso.$error.required && pessoaForm.peso.$dirty" class="alert alert-danger">
-            Por favor, preencha o peso.
+        <div ng-messages="pessoaForm.peso.$error">
+            <div ng-message="$required && $dirty" class="alert alert-danger">
+                Por favor, preencha o peso.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.cpf.$error.required && pessoaForm.cpf.$dirty" class="alert alert-danger">
-            Por favor, preencha o CPF.
+        <div ng-messages="pessoaForm.cpf.$error">
+            <div ng-message="$required && $dirty" class="alert alert-danger">
+                Por favor, preencha o CPF.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.tipo.$error.required && pessoaForm.tipo.$dirty" class="alert alert-danger">
-            Por favor, preencha o tipo de pessoa.
+        <div ng-messages="pessoaForm.tipo.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, escolha o tipo de pessoa.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.endereco.$error.required && pessoaForm.endereco.$dirty" class="alert alert-danger">
-            Por favor, preencha o endereco.
+        <div ng-messages="pessoaForm.endereco.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, escolha o endereco.
+            </div>
         </div>
 
-        <div ng-show="pessoaForm.nomeDaProfissao.$error.required && pessoaForm.nomeDaProfissao.$dirty" class="alert alert-danger">
-            Por favor, preencha o nome da profissão.
+        <div ng-messages="pessoaForm.nomeDaProfissao.$error">
+            <div ng-message="required && $dirty" class="alert alert-danger">
+                Por favor, escolha uma profissão.
+            </div>
         </div>
 
         <button class="btn btn-success" ng-click="editarPessoa(pessoa)" ng-disabled="pessoaForm.$invalid">Atualizar</button>
