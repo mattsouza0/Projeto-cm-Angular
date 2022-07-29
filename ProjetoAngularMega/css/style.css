@@ -20,6 +20,14 @@ main p {
     transform: translate(-50%, -50%);
 }
 
+.telas {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 230px;
+    text-align: center;
+}
+
 /* Navbar */
 .nav-link { 
     color: #ffffff;
